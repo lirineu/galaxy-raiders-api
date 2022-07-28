@@ -16,7 +16,7 @@ To develop Galaxy Raiders, please install and use [docker][4].
 > guarantees that. Therefore, commands below can use the `gradle` CLI directly.
 
 Please also install [pre-commit][5] in your development environment to
-automatically format code and to detect bed smells before making new commits.
+automatically format code and to detect bad smells before making new commits.
 By default, this integration also uses [docker][4].
 
 ## Linting
