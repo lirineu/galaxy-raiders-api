@@ -26,17 +26,17 @@ data class Point2D(val x: Double, val y: Double) {
   }
 
   fun impactDirection(p: Point2D): Vector2D {
-    val vetorDeImpacto: Vector2D() = impactVector(p)
+    val vetorDeImpacto: Vector2D = impactVector(p)
     return vetorDeImpacto / vetorDeImpacto.magnitude
   }
 
   fun contactVector(p: Point2D): Vector2D {
-    val vetorDeImpacto: Vector2D() = impactVector(p)
+    val vetorDeImpacto: Vector2D = impactVector(p)
     return vetorDeImpacto.normal
   }
 
   fun contactDirection(p: Point2D): Vector2D {
-    val vetorDeContato: Vector2D() = contactVector(p)
+    val vetorDeContato: Vector2D = contactVector(p)
     return vetorDeContato / vetorDeContato.magnitude
   }
 
@@ -44,3 +44,4 @@ data class Point2D(val x: Double, val y: Double) {
     return sqrt(abs(x - p.x) * abs(x - p.x) + abs(y - p.y) * abs(y - p.y))
   }
 }
+

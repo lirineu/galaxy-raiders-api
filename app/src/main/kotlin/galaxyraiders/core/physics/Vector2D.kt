@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import kotlin.math.sqrt
 import kotlin.math.abs
 import kotlin.math.acos
-import kotlin.math.toDegrees
+import kotlin.math.PI
 
 
 @JsonIgnoreProperties("unit", "normal", "degree", "magnitude")
@@ -26,7 +26,7 @@ data class Vector2D(val dx: Double, val dy: Double) {
     }
 
   val degree: Double
-    get() = toDegrees(radiant)
+    get() = radiant * 180 / PI
 
   val unit: Vector2D
     get() = Vector2D(dx / magnitude, dy / magnitude)
